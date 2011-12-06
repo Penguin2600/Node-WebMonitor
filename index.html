@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<title>Bocksystems WebMonitor (WIP)</title>
+		<link rel="stylesheet" type="text/css" href="default.css" />
+		<script src="http://ihacku.org:2222/socket.io/socket.io.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script src="http://ihacku.org/dashboard.js"></script>
+	</head>
+	<body>
+		
+		<div id="pagewrap">
+		<div id="page">
+
+		<div id="header">
+		<h1>Web Monitor</h1>
+		</div>
+
+		<div id="dashboard">
+			<div id="meterlist">
+			<div class="meter">	
+				<canvas id="cpucanvas" width="80" height="300" ></canvas>
+				<p>CPU Use</p>
+			</div>
+
+			<div class="meter">
+				<canvas class="meter" id="memcanvas" width="80" height="300" ></canvas>
+				<p>Mem Use</p>
+			</div>
+			</div>
+
+			<div id="userlist"></div>
+	
+		</div>
+		</div>
+		</div>
+	</body>
+</html>
+
