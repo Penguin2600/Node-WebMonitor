@@ -79,4 +79,11 @@ $(document).ready(function() {
         }
     }
 
+
+    $(".user").mouseenter(function() {
+        $(this).css('background-color', 'red');
+    });
+    $(".user").mouseleave(function() {
+        $(this).css('background-color', 'blue');
+    });
 });
