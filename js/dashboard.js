@@ -78,12 +78,5 @@ $(document).ready(function() {
             $("#userlist").append("<div class='user'><h1>" + data[i+1].split(/\s+/g)[0] + "</h1><p>Idle: " + data[i+1].split(/\s+/g)[2] + "</p><p>Term: " + data[i+1].split(/\s+/g)[1] + "</p></div>");
         }
     }
-
-
-    $(".user").mouseenter(function() {
-        $(this).css('background-color', 'red');
-    });
-    $(".user").mouseleave(function() {
-        $(this).css('background-color', 'blue');
-    });
+    
 });

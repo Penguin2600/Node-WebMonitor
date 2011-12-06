@@ -19,11 +19,9 @@
 
  */
 
-
 html {
     background: #000;
 }
-
 #pagewrap {
     background: #eee8d5;
     color: #EEE;
@@ -32,7 +30,6 @@ html {
     padding: 5px;
     width: 780px;
 }
-
 #header {
     background: #839496;
     display: block;
@@ -40,7 +37,6 @@ html {
     position: relative;
     width: 780px;
 }
-
 #header h1 {
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     font-size: 2em;
@@ -52,7 +48,6 @@ html {
     bottom: 0;
     right: 0;
 }
-
 #dashboard {
     margin-top: 5px;
     border: 2px solid #839496;
@@ -60,30 +55,26 @@ html {
     font-size: 15px;
     background: none;
 }
-
 #meterlist {
     float: left;
     width: 200px;
     margin-right: -200px;
 }
-
 .meter {
     display: inline-block;
 }
-
 .meter canvas {
     border: 1px solid black;
     margin: 5px;
+    border-radius: 15px;
 }
-
 .meter p {
     text-align: center;
     width: 100%;
     color: #586e75;
 }
-
 #userlist {
-    float: right;
+    float: left;
     display: inline-block;
     font-size: 12px;
     color: #586e75;
@@ -92,7 +83,6 @@ html {
     margin-left: 200px;
     width: 560px;
 }
-
 .user {
     display: inline-block;
     width: 80px;
@@ -105,16 +95,16 @@ html {
     margin: 5px;
     color: #000;
     text-align: center;
+    border-radius: 15px;
 }
-    
 .user h1 {
     display: block;
     margin-top: 0px;
     background: #839496;
     font-family: bold, Lucida Sans Unicode, Lucida Grande, sans-serif;
     font-size: 12px;
+    border-radius: 15px;
 }
-
 .user p {
     display: block;
     margin-bottom: 2px;
