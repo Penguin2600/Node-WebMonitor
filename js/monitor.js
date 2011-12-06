@@ -17,7 +17,7 @@ io.sockets.on('connection', function(socket) {
 var com = spawn('vmstat', ['-n', '-SM', '3']);
 com.stdout.on('data', function(data) {
 
-    var wOut = spawn('./users.sh');
+    var wOut = spawn('../users.sh');
 
     wOut.stdout.on('data', function(data) {
         var wTxt = trim(new Buffer(data).toString('utf8', 0, data.length));
