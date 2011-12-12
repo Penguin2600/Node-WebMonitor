@@ -75,8 +75,8 @@ $(document).ready(function() {
         var i = 0;
         $("#userlist").html("");
         for( i = 0; i < data.length - 1; i++) {
-            $("#userlist").append("<div id='"+data[i+1].split(/\s+/g)[2]+"'class='user'><h1>" + data[i+1].split(/\s+/g)[0] + "</h1><p>Idle: " + data[i+1].split(/\s+/g)[2] + "</p><p>Term: " + data[i+1].split(/\s+/g)[1] + "</p></div>");
+            $("#userlist").append("<div id='" + data[i+1].split(/\s+/g)[1] + "'class='user'><h1>" + data[i+1].split(/\s+/g)[0] + "</h1><p>Idle: " + data[i+1].split(/\s+/g)[2] + "</p><p>Term: " + data[i+1].split(/\s+/g)[1] + "</p></div>");
         }
     }
-    
+
 });
