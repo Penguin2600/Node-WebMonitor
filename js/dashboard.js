@@ -68,10 +68,17 @@ $(document).ready(function() {
     }
 
     function updateUsers(data) {
-        var i = 0;
-        $("#userlist").html("");
         for( i = 0; i < data.length - 1; i++) {
-            $("#userlist").append("<div id='" + data[i+1].split(/\s+/g)[1] + "'class='user'><h1>" + data[i+1].split(/\s+/g)[0] + "</h1><p>" + data[i+1].split(/\s+/g)[1] + " : " + data[i+1].split(/\s+/g)[2] + "</p></div>");
+            name = data[i+1].split(/\s+/g)[0];
+            $("#" + name).find("p").remove();
+        }
+        for( i = 0; i < data.length - 1; i++) {
+            name = data[i+1].split(/\s+/g)[0];
+            if($("#" + name).length != 0) {
+                $("#" + name).append("<p>" + data[i+1].split(/\s+/g)[1] + " : " + data[i+1].split(/\s+/g)[2] + "</p>");
+            } else {
+                $("#userlist").append("<div id='" + data[i+1].split(/\s+/g)[0] + "'class='user'><h1>" + data[i+1].split(/\s+/g)[0] + "</h1><p>" + data[i+1].split(/\s+/g)[1] + " : " + data[i+1].split(/\s+/g)[2] + "</p></div>");
+            }
         }
     }
 
@@ -79,6 +86,4 @@ $(document).ready(function() {
     $('.user').live("click", function() {
         socket.emit('UserEvent', $(this).find('h1').html());
     });
-    
-    
 });
