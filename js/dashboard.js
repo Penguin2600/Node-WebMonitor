@@ -19,10 +19,6 @@ $(document).ready(function() {
         }
 
     });
-
-    $('#button').click(function() {
-        socket.emit('X', "penis");
-    });
     var lastCpu = 0;
 
     cpuCanvas.textAlign = "center";
@@ -59,8 +55,8 @@ $(document).ready(function() {
 
             memCanvas.fillStyle = "black";
             memCanvas.fillText(data[2] + "MB Free", mcanvas.width / 2, 4 + free / 2);
-            memCanvas.fillText(data[3] + "MB Cached", mcanvas.width / 2, 4 + free + cache / 2);
-            memCanvas.fillText(data[4] + "MB Buffered", mcanvas.width / 2, 4 + free + cache + buff / 2);
+            memCanvas.fillText(data[4] + "MB Cached", mcanvas.width / 2, 4 + free + cache / 2);
+            memCanvas.fillText(data[3] + "MB Buffered", mcanvas.width / 2, 4 + free + cache + buff / 2);
             memCanvas.fillText(inuse + "MB In Use", mcanvas.width / 2, 4 + free + cache + buff + (mcanvas.height - (free + cache + buff)) / 2);
 
             if(step === 10) {
@@ -75,8 +71,14 @@ $(document).ready(function() {
         var i = 0;
         $("#userlist").html("");
         for( i = 0; i < data.length - 1; i++) {
-            $("#userlist").append("<div id='" + data[i+1].split(/\s+/g)[1] + "'class='user'><h1>" + data[i+1].split(/\s+/g)[0] + "</h1><p>Idle: " + data[i+1].split(/\s+/g)[2] + "</p><p>Term: " + data[i+1].split(/\s+/g)[1] + "</p></div>");
+            $("#userlist").append("<div id='" + data[i+1].split(/\s+/g)[1] + "'class='user'><h1>" + data[i+1].split(/\s+/g)[0] + "</h1><p>" + data[i+1].split(/\s+/g)[1] + " : " + data[i+1].split(/\s+/g)[2] + "</p></div>");
         }
     }
 
+
+    $('.user').live("click", function() {
+        socket.emit('UserEvent', $(this).find('h1').html());
+    });
+    
+    
 });

@@ -57,16 +57,16 @@ html {
 }
 #meterlist {
     float: left;
-    width: 200px;
-    margin-right: -200px;
+    width: 190px;
+    margin-right: -190px;
 }
 .meter {
     display: inline-block;
+    margin:5px;
 }
 .meter canvas {
     border: 1px solid black;
-    margin: 5px;
-    border-radius: 15px;
+    
 }
 .meter p {
     text-align: center;
@@ -79,35 +79,35 @@ html {
     font-size: 12px;
     color: #586e75;
     text-align: center;
-    height: 300px;
-    margin-left: 200px;
-    width: 560px;
+    height: 320px;
+    margin-left: 210px;
+    margin-right: 5px;
+    width: 520px;
 }
 .user {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 40px;
     border: 1px solid #000;
     background: #268bd2;
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     font-size: 12px;
-    padding: 5px;
+    padding: 2px;
     margin: 5px;
     color: #000;
     text-align: center;
-    border-radius: 15px;
 }
 .user h1 {
     display: block;
     margin-top: 0px;
+    margin-bottom: 2px;
     background: #839496;
     font-family: bold, Lucida Sans Unicode, Lucida Grande, sans-serif;
-    font-size: 12px;
-    border-radius: 15px;
+    font-size: 10px;
 }
 .user p {
     display: block;
-    margin-bottom: 2px;
+    margin:0px;
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     font-size: 12px;
 }
